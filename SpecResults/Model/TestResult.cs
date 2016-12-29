@@ -1,11 +1,11 @@
 ﻿namespace SpecResults.Model
 {
-	public enum TestResult
-	{
-		Unknown = 0,
-		OK,
-		Error,
-		NotRun,
-		Pending
-	}
+    public enum TestResult
+    {
+        undefined = 0,
+        passed,
+        failed,
+        skipped,
+        pending
+    }
 }

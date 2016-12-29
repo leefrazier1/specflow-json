@@ -1,14 +1,21 @@
 ﻿using System;
+using Newtonsoft.Json;
 
 namespace SpecResults.Model
 {
-	public abstract class ReportItem
+    public abstract class ReportItem
 	{
-		public string Title { get; set; }
-		public DateTime StartTime { get; set; }
-		public DateTime EndTime { get; set; }
-		public object UserData { get; set; }
-		public object GeneratorData { get; set; }
+        public static readonly int LineFiller = 0;
+		public string Name { get; set; }
+        public string Id { get; set; }
+        public string Description { get; set; }
+        [JsonIgnore]
+        public DateTime StartTime { get; set; }
+        [JsonIgnore]
+        public DateTime EndTime { get; set; }
 		public virtual TestResult Result { get; set; }
-	}
+        public int Line => LineFiller;
+        public string Keyword { get; set; }
+
+    }
 }

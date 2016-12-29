@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Reflection;
 using System.Text.RegularExpressions;
@@ -37,10 +38,11 @@ namespace SpecResults
 
 			var step = new Step
 			{
-				Title = method.Name,
-				Steps = new List<Step>(),
-				StartTime = starttime
-			};
+				Name = ScenarioStepContext.Current.StepInfo.Text,
+				StartTime = starttime,
+                Keyword = ScenarioContext.Current.CurrentScenarioBlock + " ",
+                Id = ScenarioStepContext.Current.StepInfo.Text.Replace(" ", "-").ToLower()
+            };
 
 			var attr = method.GetCustomAttributes(true).OfType<StepDefinitionBaseAttribute>().FirstOrDefault();
 			if (attr != null)
@@ -48,7 +50,7 @@ namespace SpecResults
 				// Handle regex style
 				if (!String.IsNullOrEmpty(attr.Regex))
 				{
-					step.Title = attr.Regex;
+					step.Name = attr.Regex;
 
 					for (var i = 0; i < args.Length; i++)
 					{
@@ -67,11 +69,11 @@ namespace SpecResults
 						}
 						else
 						{
-							var titleRegex = new Regex(step.Title);
-							var match = titleRegex.Match(step.Title);
+							var titleRegex = new Regex(step.Name);
+							var match = titleRegex.Match(step.Name);
 							if (match.Groups.Count > 1)
 							{
-								step.Title = step.Title.ReplaceFirst(match.Groups[1].Value, args[i].ToString());
+								step.Name = step.Name.ReplaceFirst(match.Groups[1].Value, args[i].ToString());
 							}
 							else
 							{
@@ -85,8 +87,8 @@ namespace SpecResults
 					if (methodName.Contains('_'))
 					{
 						// underscore style
-						step.Title = methodName.Replace("_", " ");
-						step.Title = step.Title.Substring(step.Title.IndexOf(' ') + 1);
+						step.Name = methodName.Replace("_", " ");
+						step.Name = step.Name.Substring(step.Name.IndexOf(' ') + 1);
 
 						var methodInfo = method as MethodInfo;
 						for (var i = 0; i < args.Length; i++)
@@ -108,13 +110,13 @@ namespace SpecResults
 							{
 								var name = methodInfo.GetParamName(i).ToUpper();
 								var value = arg.ToString();
-								if (step.Title.Contains(name + " "))
+								if (step.Name.Contains(name + " "))
 								{
-									step.Title = step.Title.ReplaceFirst(name + " ", value + " ");
+									step.Name = step.Name.ReplaceFirst(name + " ", value + " ");
 								}
 								else
 								{
-									step.Title = step.Title.ReplaceFirst(" " + name, " " + value);
+									step.Name = step.Name.ReplaceFirst(" " + name, " " + value);
 								}
 							}
 						}
@@ -126,6 +128,8 @@ namespace SpecResults
 					}
 				}
 			}
+
+		    step.Name = ScenarioStepContext.Current.StepInfo.Text;
 
 			return step;
 		}
@@ -148,7 +152,7 @@ namespace SpecResults
 
 				var step = CreateStep(starttime, methodBase, args);
 
-				var stepContainer = reporter.CurrentStep ?? reporter.CurrentScenarioBlock;
+				var stepContainer = reporter.CurrentScenario;
 				stepContainer.Steps.Add(step);
 				reporter.CurrentStep = step;
 				OnStartedStep(reporter);
@@ -185,22 +189,30 @@ namespace SpecResults
 				TestResult testResult;
 				if (actionException is PendingStepException)
 				{
-					testResult = TestResult.Pending;
+					testResult = TestResult.pending;
 				}
 				else if (actionException != null)
 				{
-					testResult = TestResult.Error;
+					testResult = TestResult.failed;
 				}
 				else
 				{
-					testResult = TestResult.OK;
+					testResult = TestResult.passed;
 				}
 
-				foreach (var reporter in GetAll())
+
+                foreach (var reporter in GetAll())
 				{
 					reporter.CurrentStep.EndTime = endtime;
-					reporter.CurrentStep.Result = testResult;
-					reporter.CurrentStep.Exception = actionException.ToExceptionInfo();
+				    reporter.CurrentStep.Result = new StepResult
+				    {
+				        Duration =
+				            ((endtime - reporter.CurrentStep.StartTime).TotalMilliseconds*1000000).ToString(
+				                CultureInfo.CurrentCulture),
+				        Status = testResult.ToString(),
+				        Error = actionException != null ? actionException.ToExceptionInfo().Message : string.Empty
+				    };
+
 					OnFinishedStep(reporter);
 
 					reporter.CurrentStep = currentSteps[reporter];

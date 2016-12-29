@@ -2,7 +2,6 @@
 using System.Linq;
 using SpecResults.Model;
 using TechTalk.SpecFlow;
-using ScenarioBlock = SpecResults.Model.ScenarioBlock;
 
 namespace SpecResults
 {
@@ -17,7 +16,7 @@ namespace SpecResults
 			{
 				var feature = reporter.CurrentFeature;
 
-				var scenarioOutlineGroups = feature.Scenarios.GroupBy(scenario => scenario.Title)
+				var scenarioOutlineGroups = feature.Elements.GroupBy(scenario => scenario.Name)
 					.Where((scenarioGrp, key) => scenarioGrp.Count() > 1)
 					.Select((scenarioGrp, key) => scenarioGrp.ToList());
 
@@ -25,7 +24,7 @@ namespace SpecResults
 				{
 					for (int i = 0; i < scenarioOutlineGroup.Count(); i++)
 					{
-						scenarioOutlineGroup[i].Title = string.Format("{0} (example {1})", scenarioOutlineGroup[i].Title, i + 1);
+						scenarioOutlineGroup[i].Name = string.Format("{0} (example {1})", scenarioOutlineGroup[i].Name, i + 1);
 					}
 				}
 
@@ -44,19 +43,6 @@ namespace SpecResults
 				scenario.EndTime = CurrentRunTime;
 				OnFinishedScenario(reporter);
 				reporter.CurrentScenario = null;
-			}
-		}
-
-		[AfterScenarioBlock]
-		internal static void AfterScenarioBlock()
-		{
-			var endtime = CurrentRunTime;
-			foreach (var reporter in reporters)
-			{
-				var scenarioblock = reporter.CurrentScenarioBlock;
-				scenarioblock.EndTime = endtime;
-				OnFinishedScenarioBlock(reporter);
-				reporter.CurrentScenarioBlock = null;
 			}
 		}
 
@@ -85,7 +71,6 @@ namespace SpecResults
 					reporter.Report = new Report
 					{
 						Features = new List<Feature>(),
-						Generator = reporter.Name,
 						StartTime = starttime
 					};
 
@@ -99,12 +84,13 @@ namespace SpecResults
 			{
 				var feature = new Feature
 				{
-					Tags = new List<string>(FeatureContext.Current.FeatureInfo.Tags),
-					Scenarios = new List<Scenario>(),
+                    Tags = FeatureContext.Current.FeatureInfo.Tags.Select(tag => new Tag() { Name = tag }).ToList(),
+                    Elements = new List<Scenario>(),
 					StartTime = starttime,
-					Title = FeatureContext.Current.FeatureInfo.Title,
-					Description = FeatureContext.Current.FeatureInfo.Description
-				};
+					Name = FeatureContext.Current.FeatureInfo.Title,
+					Description = FeatureContext.Current.FeatureInfo.Description,
+                    Id = FeatureContext.Current.FeatureInfo.Title.Replace(" ", "-").ToLower()
+                };
 
 				reporter.Report.Features.Add(feature);
 				reporter.CurrentFeature = feature;
@@ -122,43 +108,17 @@ namespace SpecResults
 			{
 				var scenario = new Scenario
 				{
-					Tags = new List<string>(ScenarioContext.Current.ScenarioInfo.Tags),
-					Given = new ScenarioBlock {Steps = new List<Step>()},
-					When = new ScenarioBlock {Steps = new List<Step>()},
-					Then = new ScenarioBlock {Steps = new List<Step>()},
-					StartTime = starttime,
-					Title = ScenarioContext.Current.ScenarioInfo.Title
-				};
+                    Tags = ScenarioContext.Current.ScenarioInfo.Tags.Select(tag => new Tag() { Name = tag }).ToList(),
+                    StartTime = starttime,
+					Name = ScenarioContext.Current.ScenarioInfo.Title,
+                    Steps = new List<Step>(),
+                    Description = ScenarioContext.Current.ScenarioInfo.Title
+                };
 
-				reporter.CurrentFeature.Scenarios.Add(scenario);
+				reporter.CurrentFeature.Elements.Add(scenario);
 				reporter.CurrentScenario = scenario;
 
 				OnStartedScenario(reporter);
-			}
-		}
-
-		[BeforeScenarioBlock]
-		internal static void BeforeScenarioBlock()
-		{
-			var starttime = CurrentRunTime;
-
-			foreach (var reporter in reporters)
-			{
-				switch (ScenarioContext.Current.CurrentScenarioBlock)
-				{
-					case TechTalk.SpecFlow.ScenarioBlock.Given:
-						reporter.CurrentScenarioBlock = reporter.CurrentScenario.Given;
-						break;
-					case TechTalk.SpecFlow.ScenarioBlock.Then:
-						reporter.CurrentScenarioBlock = reporter.CurrentScenario.Then;
-						break;
-					case TechTalk.SpecFlow.ScenarioBlock.When:
-						reporter.CurrentScenarioBlock = reporter.CurrentScenario.When;
-						break;
-				}
-
-				reporter.CurrentScenarioBlock.StartTime = starttime;
-				OnStartedScenarioBlock(reporter);
 			}
 		}
 

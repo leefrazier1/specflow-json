@@ -2,8 +2,13 @@
 
 namespace SpecResults.Model
 {
-	public class TaggedReportItem : ReportItem
+    public class Tag : ReportItem
+    {
+        public new string Name { get; set; }
+    }
+
+    public class TaggedReportItem : ReportItem
 	{
-		public List<string> Tags { get; set; }
+		public List<Tag> Tags { get; set; }
 	}
 }

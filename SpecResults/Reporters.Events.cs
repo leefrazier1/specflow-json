@@ -19,10 +19,6 @@ namespace SpecResults
 
 		public static event EventHandler<ScenarioEventArgs> FinishedScenario;
 
-		public static event EventHandler<ScenarioBlockEventArgs> StartedScenarioBlock;
-
-		public static event EventHandler<ScenarioBlockEventArgs> FinishedScenarioBlock;
-
 		public static event EventHandler<StepEventArgs> StartedStep;
 
 		public static event EventHandler<StepEventArgs> FinishedStep;
@@ -59,16 +55,6 @@ namespace SpecResults
 		internal static void OnFinishedScenario(Reporter reporter)
 		{
 			RaiseEvent(FinishedScenario, new ScenarioEventArgs(reporter));
-		}
-
-		internal static void OnStartedScenarioBlock(Reporter reporter)
-		{
-			RaiseEvent(StartedScenarioBlock, new ScenarioBlockEventArgs(reporter));
-		}
-
-		internal static void OnFinishedScenarioBlock(Reporter reporter)
-		{
-			RaiseEvent(FinishedScenarioBlock, new ScenarioBlockEventArgs(reporter));
 		}
 
 		internal static void OnStartedStep(Reporter reporter)

@@ -19,11 +19,6 @@ namespace SpecResults
 		public Scenario CurrentScenario { get; internal set; }
 
 		/// <summary>
-		///     ScenarioBlock currently running
-		/// </summary>
-		public ScenarioBlock CurrentScenarioBlock { get; internal set; }
-
-		/// <summary>
 		///     Step currently running
 		/// </summary>
 		public Step CurrentStep { get; internal set; }

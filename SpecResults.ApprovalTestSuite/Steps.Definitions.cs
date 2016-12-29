@@ -1,7 +1,5 @@
 ﻿using System;
 using SpecResults.Json;
-using SpecResults.PlainText;
-using SpecResults.Xml;
 using TechTalk.SpecFlow;
 
 namespace SpecResults.ApprovalTestSuite
@@ -14,8 +12,6 @@ namespace SpecResults.ApprovalTestSuite
 		{
 			Reporters.FixedRunTime = DateTime.MinValue;
 			Reporters.Add(new JsonReporter());
-			Reporters.Add(new XmlReporter());
-			Reporters.Add(new PlainTextReporter());
 			IntializeApprovalTests();
 		}
 

@@ -19,19 +19,7 @@ namespace SpecResults.ApprovalTestSuite
 
 				// Replace Stack Trace value of reported exceptions, because
 				// content depends on runtime environment
-				var steps = reporter.Report.Features
-					.SelectMany(f => f.Scenarios)
-					.SelectMany(s => new[] {s.Given, s.When, s.Then})
-					.SelectMany(s => s.Steps);
-
-				foreach (var step in steps)
-				{
-					if (step.Exception != null)
-					{
-						step.Exception.StackTrace = "<removed to make tests deterministic>";
-					}
-				}
-
+				
 				// Verify IFileWriter
 				var filepath = Path.GetTempFileName();
 				reporter.WriteToFile(filepath);

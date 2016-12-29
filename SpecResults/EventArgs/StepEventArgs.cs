@@ -2,8 +2,8 @@
 
 namespace SpecResults.EventArgs
 {
-	public class StepEventArgs : ScenarioBlockEventArgs
-	{
+	public class StepEventArgs : ScenarioEventArgs
+    {
 		public StepEventArgs(Reporter reporter)
 			: base(reporter)
 		{

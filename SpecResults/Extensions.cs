@@ -17,27 +17,27 @@ namespace SpecResults
 		public static TestResult GetResult(this IEnumerable<TestResult> results)
 		{
 			var testResults = results as TestResult[] ?? results.ToArray();
-			if (testResults.Any(x => x == TestResult.Error))
+			if (testResults.Any(x => x == TestResult.failed))
 			{
-				return TestResult.Error;
+				return TestResult.failed;
 			}
 
-			if (testResults.Any(x => x == TestResult.Pending))
+			if (testResults.Any(x => x == TestResult.pending))
 			{
-				return TestResult.Pending;
+				return TestResult.pending;
 			}
 
-			if (testResults.Any(x => x == TestResult.NotRun))
+			if (testResults.Any(x => x == TestResult.skipped))
 			{
-				return TestResult.NotRun;
+				return TestResult.skipped;
 			}
 
-			if (testResults.Any(x => x == TestResult.Unknown))
+			if (testResults.Any(x => x == TestResult.undefined))
 			{
-				return TestResult.Unknown;
+				return TestResult.undefined;
 			}
 
-			return TestResult.OK;
+			return TestResult.passed;
 		}
 
 		internal static IEnumerable<string> GetPendingSteps(this ScenarioContext scenarioContenxt)

@@ -25,7 +25,7 @@ namespace SpecResults.Json
 		public override void WriteToStream(Stream stream)
 		{
 			var json = JsonConvert.SerializeObject(
-				Report,
+				Report.Features,
 				JsonSerializerSettings
 				);
 			var bytes = Encoding.UTF8.GetBytes(json);
