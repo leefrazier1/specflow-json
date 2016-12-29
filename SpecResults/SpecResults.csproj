@@ -81,6 +81,7 @@
     <Compile Include="EventArgs\StepEventArgs.cs" />
     <Compile Include="Markdown.cs" />
     <Compile Include="Model\ExceptionData.cs" />
+    <Compile Include="Model\Row.cs" />
     <Compile Include="Model\StepResult.cs" />
     <Compile Include="Model\TableParam.cs" />
     <Compile Include="ReportingAspect\ReportingAttribute.cs" />

@@ -4,7 +4,7 @@ namespace SpecResults.Model
 {
     public class StepResult
     {
-        public string Duration { get; set; }
+        public long Duration { get; set; }
 
         public string Status { get; set; }
 

@@ -40,7 +40,7 @@ namespace SpecResults
 			foreach (var reporter in reporters.ToArray())
 			{
 				var scenario = reporter.CurrentScenario;
-				scenario.EndTime = CurrentRunTime;
+                scenario.EndTime = CurrentRunTime;
 				OnFinishedScenario(reporter);
 				reporter.CurrentScenario = null;
 			}

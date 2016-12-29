@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.Remoting.Messaging;
 using System.Text.RegularExpressions;
 using SpecResults.Model;
 using TechTalk.SpecFlow;
@@ -58,14 +58,14 @@ namespace SpecResults
 						var table = arg as Table;
 						if (table != null)
 						{
-							step.Table = new TableParam
-							{
-								Columns = table.Header.ToList(),
-								Rows = table.Rows.Select(x => x.Keys.ToDictionary(
-									k => k,
-									k => x[k]
-									)).ToList()
-							};
+
+						    step.Rows = new List<Row> {new Row() {Cells = table.Header.ToList()}};
+
+						    foreach (var tableRow in table.Rows)
+						    {
+                                step.Rows.Add(new Row() { Cells = tableRow.Select(x => x.Value).ToList()
+                                });
+                            }
 						}
 						else
 						{
@@ -97,14 +97,15 @@ namespace SpecResults
 							var table = arg as Table;
 							if (table != null)
 							{
-								step.Table = new TableParam
-								{
-									Columns = table.Header.ToList(),
-									Rows = table.Rows.Select(x => x.Keys.ToDictionary(
-										k => k,
-										k => x[k]
-										)).ToList()
-								};
+							    step.Rows = new List<Row> {new Row() {Cells = table.Header.ToList()}};
+
+                                foreach (var tableRow in table.Rows)
+                                {
+                                    step.Rows.Add(new Row()
+                                    {
+                                        Cells = tableRow.Select(x => x.Value).ToList()
+                                    });
+                                }
 							}
 							else
 							{
@@ -207,8 +208,7 @@ namespace SpecResults
 				    reporter.CurrentStep.Result = new StepResult
 				    {
 				        Duration =
-				            ((endtime - reporter.CurrentStep.StartTime).TotalMilliseconds*1000000).ToString(
-				                CultureInfo.CurrentCulture),
+				            (long) ((endtime - reporter.CurrentStep.StartTime).TotalMilliseconds*1000000),
 				        Status = testResult.ToString(),
 				        Error = actionException != null ? actionException.ToExceptionInfo().Message : string.Empty
 				    };
