@@ -6,7 +6,7 @@ namespace SpecResults.Model
     {
         public long Duration { get; set; }
 
-        public string Status { get; set; }
+        public TestResult Status { get; set; }
 
         [JsonProperty("error_message")]
         public string Error { get; set; }

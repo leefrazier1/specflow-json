@@ -209,7 +209,7 @@ namespace SpecResults
 				    {
 				        Duration =
 				            (long) ((endtime - reporter.CurrentStep.StartTime).TotalMilliseconds*1000000),
-				        Status = testResult.ToString(),
+				        Status = testResult,
 				        Error = actionException != null ? actionException.ToExceptionInfo().Message : string.Empty
 				    };
 

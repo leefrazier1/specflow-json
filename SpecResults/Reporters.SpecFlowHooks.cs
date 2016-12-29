@@ -28,6 +28,10 @@ namespace SpecResults
 					}
 				}
 
+			    feature.Result = feature.Elements.Exists(o => o.Result == TestResult.failed)
+			        ? TestResult.failed
+			        : TestResult.passed;
+    
 				feature.EndTime = CurrentRunTime;
 				OnFinishedFeature(reporter);
 				reporter.CurrentFeature = null;
@@ -41,6 +45,9 @@ namespace SpecResults
 			{
 				var scenario = reporter.CurrentScenario;
                 scenario.EndTime = CurrentRunTime;
+			    scenario.Result = scenario.Steps.Exists(o => o.Result.Status == TestResult.failed)
+			        ? TestResult.failed
+			        : TestResult.passed;
 				OnFinishedScenario(reporter);
 				reporter.CurrentScenario = null;
 			}
