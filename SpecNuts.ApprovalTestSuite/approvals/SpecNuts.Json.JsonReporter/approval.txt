@@ -1,0 +1,539 @@
+﻿[
+  {
+    "description": "\tIn order to test my reporter plugin\n\tAs a developer\n\tI want to run a predefined test suite",
+    "uri": "/uri/placeholder",
+    "elements": [
+      {
+        "steps": [
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed",
+              "error_message": ""
+            },
+            "name": "there are 12 cucumbers",
+            "id": "there-are-12-cucumbers",
+            "line": 0,
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed",
+              "error_message": ""
+            },
+            "name": "I eat 5 cucumbers",
+            "id": "i-eat-5-cucumbers",
+            "line": 0,
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed",
+              "error_message": ""
+            },
+            "name": "I should have 7 cucumbers",
+            "id": "i-should-have-7-cucumbers",
+            "line": 0,
+            "keyword": "Then "
+          }
+        ],
+        "keyword": "Scenario",
+        "type": "scenario",
+        "tags": [],
+        "name": "eating (example 1)",
+        "description": "eating",
+        "result": "passed",
+        "line": 0
+      },
+      {
+        "steps": [
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed",
+              "error_message": ""
+            },
+            "name": "there are 20 cucumbers",
+            "id": "there-are-20-cucumbers",
+            "line": 0,
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed",
+              "error_message": ""
+            },
+            "name": "I eat 5 cucumbers",
+            "id": "i-eat-5-cucumbers",
+            "line": 0,
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed",
+              "error_message": ""
+            },
+            "name": "I should have 15 cucumbers",
+            "id": "i-should-have-15-cucumbers",
+            "line": 0,
+            "keyword": "Then "
+          }
+        ],
+        "keyword": "Scenario",
+        "type": "scenario",
+        "tags": [],
+        "name": "eating (example 2)",
+        "description": "eating",
+        "result": "passed",
+        "line": 0
+      },
+      {
+        "steps": [
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed",
+              "error_message": ""
+            },
+            "name": "a scenario is specified",
+            "id": "a-scenario-is-specified",
+            "line": 0,
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed",
+              "error_message": ""
+            },
+            "name": "a child step was executed",
+            "id": "a-child-step-was-executed",
+            "line": 0,
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed",
+              "error_message": ""
+            },
+            "name": "a child step was executed",
+            "id": "a-child-step-was-executed",
+            "line": 0,
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed",
+              "error_message": ""
+            },
+            "name": "a report is generated",
+            "id": "a-report-is-generated",
+            "line": 0,
+            "keyword": "Then "
+          }
+        ],
+        "keyword": "Scenario",
+        "type": "scenario",
+        "tags": [],
+        "name": "Nested step",
+        "description": "Nested step",
+        "result": "passed",
+        "line": 0
+      },
+      {
+        "steps": [
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed",
+              "error_message": ""
+            },
+            "name": "a scenario is specified",
+            "id": "a-scenario-is-specified",
+            "line": 0,
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed",
+              "error_message": ""
+            },
+            "name": "the tests run",
+            "id": "the-tests-run",
+            "line": 0,
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed",
+              "error_message": ""
+            },
+            "name": "a report is generated",
+            "id": "a-report-is-generated",
+            "line": 0,
+            "keyword": "Then "
+          }
+        ],
+        "keyword": "Scenario",
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@SomeTag",
+            "result": "undefined",
+            "line": 0
+          }
+        ],
+        "name": "Single scenario",
+        "description": "Single scenario",
+        "result": "passed",
+        "line": 0
+      },
+      {
+        "steps": [
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed",
+              "error_message": ""
+            },
+            "name": "a scenario is specified",
+            "id": "a-scenario-is-specified",
+            "line": 0,
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "pending",
+              "error_message": "One or more step definitions are not implemented yet."
+            },
+            "name": "a step is not implemented",
+            "id": "a-step-is-not-implemented",
+            "line": 0,
+            "keyword": "When "
+          }
+        ],
+        "keyword": "Scenario",
+        "type": "scenario",
+        "tags": [],
+        "name": "Step is not implemented",
+        "description": "Step is not implemented",
+        "result": "passed",
+        "line": 0
+      },
+      {
+        "steps": [
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed",
+              "error_message": ""
+            },
+            "name": "a \"awesome\" scenario is specified",
+            "id": "a-\"awesome\"-scenario-is-specified",
+            "line": 0,
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed",
+              "error_message": ""
+            },
+            "name": "the tests with \"multiple\" parameters run \"smoothly\"",
+            "id": "the-tests-with-\"multiple\"-parameters-run-\"smoothly\"",
+            "line": 0,
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed",
+              "error_message": ""
+            },
+            "name": "\"1\" report is generated",
+            "id": "\"1\"-report-is-generated",
+            "line": 0,
+            "keyword": "Then "
+          }
+        ],
+        "keyword": "Scenario",
+        "type": "scenario",
+        "tags": [],
+        "name": "Steps contain arguments",
+        "description": "Steps contain arguments",
+        "result": "passed",
+        "line": 0
+      },
+      {
+        "steps": [
+          {
+            "multi_line_parameter": "Here we go with mulitiple\r\nlines!",
+            "result": {
+              "duration": 0,
+              "status": "passed",
+              "error_message": ""
+            },
+            "name": "a \"awesome\" scenario is specified with a multi-line argument",
+            "id": "a-\"awesome\"-scenario-is-specified-with-a-multi-line-argument",
+            "line": 0,
+            "keyword": "Given "
+          },
+          {
+            "multi_line_parameter": "like\r\nthis \r\none",
+            "result": {
+              "duration": 0,
+              "status": "passed",
+              "error_message": ""
+            },
+            "name": "the tests with multiple line parameters",
+            "id": "the-tests-with-multiple-line-parameters",
+            "line": 0,
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed",
+              "error_message": ""
+            },
+            "name": "\"1\" report is generated",
+            "id": "\"1\"-report-is-generated",
+            "line": 0,
+            "keyword": "Then "
+          }
+        ],
+        "keyword": "Scenario",
+        "type": "scenario",
+        "tags": [],
+        "name": "Steps contain multi arguments",
+        "description": "Steps contain multi arguments",
+        "result": "passed",
+        "line": 0
+      },
+      {
+        "steps": [
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed",
+              "error_message": ""
+            },
+            "name": "a scenario is specified",
+            "id": "a-scenario-is-specified",
+            "line": 0,
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed",
+              "error_message": ""
+            },
+            "name": "a step uses method-name style",
+            "id": "a-step-uses-method-name-style",
+            "line": 0,
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed",
+              "error_message": ""
+            },
+            "name": "a step uses method-name style with two parameters",
+            "id": "a-step-uses-method-name-style-with-two-parameters",
+            "line": 0,
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed",
+              "error_message": ""
+            },
+            "name": "a report is generated",
+            "id": "a-report-is-generated",
+            "line": 0,
+            "keyword": "Then "
+          }
+        ],
+        "keyword": "Scenario",
+        "type": "scenario",
+        "tags": [],
+        "name": "Step uses method-name undescores style",
+        "description": "Step uses method-name undescores style",
+        "result": "passed",
+        "line": 0
+      },
+      {
+        "steps": [
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed",
+              "error_message": ""
+            },
+            "name": "a scenario is specified",
+            "id": "a-scenario-is-specified",
+            "line": 0,
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed",
+              "error_message": ""
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Id",
+                  "Name"
+                ],
+                "line": 0
+              },
+              {
+                "cells": [
+                  "1",
+                  "John Doe"
+                ],
+                "line": 0
+              },
+              {
+                "cells": [
+                  "2",
+                  "Some Dude"
+                ],
+                "line": 0
+              },
+              {
+                "cells": [
+                  "3",
+                  "Any Guy"
+                ],
+                "line": 0
+              }
+            ],
+            "name": "a step uses method-name underscore style with a table param and a second param:",
+            "id": "a-step-uses-method-name-underscore-style-with-a-table-param-and-a-second-param:",
+            "line": 0,
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed",
+              "error_message": ""
+            },
+            "name": "a report is generated",
+            "id": "a-report-is-generated",
+            "line": 0,
+            "keyword": "Then "
+          }
+        ],
+        "keyword": "Scenario",
+        "type": "scenario",
+        "tags": [],
+        "name": "Step uses method-name undescores style with table param",
+        "description": "Step uses method-name undescores style with table param",
+        "result": "passed",
+        "line": 0
+      },
+      {
+        "steps": [
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed",
+              "error_message": ""
+            },
+            "name": "a scenario is specified",
+            "id": "a-scenario-is-specified",
+            "line": 0,
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed",
+              "error_message": ""
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Id",
+                  "Name"
+                ],
+                "line": 0
+              },
+              {
+                "cells": [
+                  "1",
+                  "John Doe"
+                ],
+                "line": 0
+              },
+              {
+                "cells": [
+                  "2",
+                  "Some Dude"
+                ],
+                "line": 0
+              },
+              {
+                "cells": [
+                  "3",
+                  "Any Guy"
+                ],
+                "line": 0
+              }
+            ],
+            "name": "the a step contains a table and a \"second\" param:",
+            "id": "the-a-step-contains-a-table-and-a-\"second\"-param:",
+            "line": 0,
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed",
+              "error_message": ""
+            },
+            "name": "a report is generated",
+            "id": "a-report-is-generated",
+            "line": 0,
+            "keyword": "Then "
+          }
+        ],
+        "keyword": "Scenario",
+        "type": "scenario",
+        "tags": [],
+        "name": "Table param",
+        "description": "Table param",
+        "result": "passed",
+        "line": 0
+      }
+    ],
+    "keyword": "Feature",
+    "tags": [
+      {
+        "name": "@Category:SomeFeatureCategory",
+        "result": "undefined",
+        "line": 0
+      }
+    ],
+    "name": "Test Suite",
+    "id": "test-suite",
+    "result": "passed",
+    "line": 0
+  }
+]

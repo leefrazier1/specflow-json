@@ -91,7 +91,7 @@ namespace SpecNuts
 			{
 				var feature = new Feature
 				{
-                    Tags = FeatureContext.Current.FeatureInfo.Tags.Select(tag => new Tag() { Name = tag }).ToList(),
+                    Tags = FeatureContext.Current.FeatureInfo.Tags.Select(tag => new Tag() { Name = "@"+ tag }).ToList(),
                     Elements = new List<Scenario>(),
 					StartTime = starttime,
 					Name = FeatureContext.Current.FeatureInfo.Title,
@@ -115,7 +115,7 @@ namespace SpecNuts
 			{
 				var scenario = new Scenario
 				{
-                    Tags = ScenarioContext.Current.ScenarioInfo.Tags.Select(tag => new Tag() { Name = tag }).ToList(),
+                    Tags = ScenarioContext.Current.ScenarioInfo.Tags.Select(tag => new Tag() { Name = "@" + tag }).ToList(),
                     StartTime = starttime,
 					Name = ScenarioContext.Current.ScenarioInfo.Title,
                     Steps = new List<Step>(),
