@@ -48,7 +48,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SpecResults\SpecNuts.csproj">
+    <ProjectReference Include="..\SpecNuts\SpecNuts.csproj">
       <Project>{eaba391e-6b65-4e5c-8842-3d71a5f97b4f}</Project>
       <Name>SpecNuts</Name>
     </ProjectReference>
