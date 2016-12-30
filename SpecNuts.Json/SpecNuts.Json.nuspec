@@ -12,11 +12,11 @@
     <iconUrl>https://avatars3.githubusercontent.com/u/4390751?v=3</iconUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>$description$</description>
-		<releaseNotes></releaseNotes>
+		<releaseNotes>$releaseNotes$</releaseNotes>
 		<copyright>Copyright 2016</copyright>
 		<tags>specflow donut bdd test reporting json</tags>
 		<dependencies>
-			<dependency id="SpecResults" version="$version$" />
+			<dependency id="SpecNuts" version="$version$" />
 		</dependencies>
 	</metadata>
 </package>
