@@ -99,9 +99,6 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>TestSuite.feature.cs</LastGenOutput>
     </None>
-    <None Include="SpecResults.ApprovalTestSuite.nuspec">
-      <SubType>Designer</SubType>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SpecNuts.Json\SpecNuts.Json.csproj">

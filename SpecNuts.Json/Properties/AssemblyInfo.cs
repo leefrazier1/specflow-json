@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 
-[assembly: AssemblyTitle("SpecResults.Json")]
-[assembly: AssemblyDescription("Formerly known as SpecFlow.Reporting.Json: generate SpecFlow testresult Json reports")]
+[assembly: AssemblyTitle("SpecNuts.Json")]
+[assembly: AssemblyDescription("A forked from SpecResults.Json project to provide the ability to generate json file in cucumber format.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Tim Schlechter")]
-[assembly: AssemblyProduct("SpecResults.Json")]
-[assembly: AssemblyCopyright("Copyright ©  2014")]
+[assembly: AssemblyCompany("William Sia")]
+[assembly: AssemblyProduct("SpecNuts.Json")]
+[assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

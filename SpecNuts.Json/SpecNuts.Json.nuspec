@@ -7,14 +7,14 @@
 		<title>$title$</title>
 		<authors>$author$</authors>
 		<owners>$author$</owners>
-		<licenseUrl>https://raw.githubusercontent.com/TimSchlechter/SpecResults/master/LICENSE</licenseUrl>
-		<projectUrl>https://github.com/specflowreporting/SpecResults</projectUrl>
-		<iconUrl>https://dl.dropboxusercontent.com/u/17880436/SpecFlowReporting.png</iconUrl>
+    <licenseUrl>https://raw.githubusercontent.com/MagenTys/SpecNuts/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/MagenTys/SpecNuts</projectUrl>
+    <iconUrl>https://avatars3.githubusercontent.com/u/4390751?v=3</iconUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>$description$</description>
 		<releaseNotes></releaseNotes>
-		<copyright>Copyright 2015</copyright>
-		<tags>specflow bdd test reporting json</tags>
+		<copyright>Copyright 2016</copyright>
+		<tags>specflow donut bdd test reporting json</tags>
 		<dependencies>
 			<dependency id="SpecResults" version="$version$" />
 		</dependencies>

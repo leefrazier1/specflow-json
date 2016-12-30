@@ -5,14 +5,14 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 
-[assembly: AssemblyTitle("SpecResults.ApprovalTestSuite")]
+[assembly: AssemblyTitle("SpecNuts.ApprovalTestSuite")]
 [assembly:
 	AssemblyDescription(
-		"Formerly known as SpecFlow.Reporting.ApprovalTestSuite: Approval test suite which can be used to test reporters")]
+        "A forked from SpecResults.ApprovalTestSuite project to provide the ability to generate json file in cucumber format.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Tim Schlechter")]
-[assembly: AssemblyProduct("SpecResults.ApprovalTestSuite")]
-[assembly: AssemblyCopyright("Copyright ©  2014")]
+[assembly: AssemblyCompany("William Sia")]
+[assembly: AssemblyProduct("SpecNuts.ApprovalTestSuite")]
+[assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

@@ -1,12 +1,12 @@
 ﻿using System.Reflection;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("SpecResults")]
-[assembly: AssemblyDescription("Formerly known as SpecFlow.Reporting: generate SpecFlow testresult reports.")]
+[assembly: AssemblyTitle("SpecNuts")]
+[assembly: AssemblyDescription("A forked from SpecResults project to provide the ability to generate test result in cucumber format.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Tim Schlechter")]
-[assembly: AssemblyProduct("SpecResults")]
-[assembly: AssemblyCopyright("Copyright ©  2014")]
+[assembly: AssemblyCompany("William Sia")]
+[assembly: AssemblyProduct("SpecNuts")]
+[assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: ComVisible(false)]
