@@ -6,8 +6,7 @@
 > All previous published versions of SpecFlow.Reporting are still available on
 > NuGet.org, alltough they aren't listed anymore.
 
-# Generating better SpecFlow reports [![Build status](https://ci.appveyor.com/api/projects/status/yk664hx48ei6l5s2?svg=true)](https://ci.appveyor.com/project/williamsia/specresults) 
-[![NuGet version](https://badge.fury.io/nu/SpecNuts.svg)](https://badge.fury.io/nu/SpecNuts)
+# Generating better SpecFlow reports [![Build status](https://ci.appveyor.com/api/projects/status/yk664hx48ei6l5s2?svg=true)](https://ci.appveyor.com/project/williamsia/specresults) [![NuGet version](https://badge.fury.io/nu/SpecNuts.svg)](https://badge.fury.io/nu/SpecNuts)
 
 
 [SpecResults](https://www.nuget.org/packages/SpecResults) was created to get better feedback from your automated [SpecFlow](http://www.specflow.org/) testsuite. With unit tests most times reporting is only interesting for developers and testers. But when practicing BDD, the output of your automated tests might be valuable for the whole development team, management and pherhaps even end-users.
