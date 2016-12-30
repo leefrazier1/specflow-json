@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SpecResults.Json
+namespace SpecNuts.Json
 {
 	public static class Extensions
 	{

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using ApprovalTests.Core;
 using ApprovalTests.Reporters;
+using SpecNuts;
 using Approvals = ApprovalTests.Approvals;
 
 namespace SpecResults.ApprovalTestSuite

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SpecResults.Model
+namespace SpecNuts.Model
 {
 	/// <summary>
 	///     Contains the information about an <see cref="Exception" />.

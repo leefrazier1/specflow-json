@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace SpecResults.Model
+namespace SpecNuts.Model
 {
 	public class Step : ReportItem
 	{

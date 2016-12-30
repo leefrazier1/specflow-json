@@ -1,7 +1,7 @@
 ﻿using System;
 using Newtonsoft.Json;
 
-namespace SpecResults.Model
+namespace SpecNuts.Model
 {
     public abstract class ReportItem
 	{

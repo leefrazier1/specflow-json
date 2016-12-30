@@ -104,13 +104,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SpecResults.Json\SpecResults.Json.csproj">
+    <ProjectReference Include="..\SpecResults.Json\SpecNuts.Json.csproj">
       <Project>{c830c923-5398-4f28-99c2-1592ee5f4f7b}</Project>
-      <Name>SpecResults.Json</Name>
+      <Name>SpecNuts.Json</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SpecResults\SpecResults.csproj">
+    <ProjectReference Include="..\SpecResults\SpecNuts.csproj">
       <Project>{eaba391e-6b65-4e5c-8842-3d71a5f97b4f}</Project>
-      <Name>SpecResults</Name>
+      <Name>SpecNuts</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

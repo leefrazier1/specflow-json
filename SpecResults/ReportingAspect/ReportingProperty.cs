@@ -2,7 +2,7 @@
 using System.Runtime.Remoting.Contexts;
 using System.Runtime.Remoting.Messaging;
 
-namespace SpecResults.ReportingAspect
+namespace SpecNuts.ReportingAspect
 {
 	internal class ReportingProperty : IContextProperty, IContributeObjectSink
 	{

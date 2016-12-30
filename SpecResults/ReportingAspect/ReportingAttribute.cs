@@ -1,7 +1,7 @@
 ﻿using System.Runtime.Remoting.Activation;
 using System.Runtime.Remoting.Contexts;
 
-namespace SpecResults.ReportingAspect
+namespace SpecNuts.ReportingAspect
 {
 	internal class ReportingAttribute : ContextAttribute
 	{

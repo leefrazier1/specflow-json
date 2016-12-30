@@ -1,7 +1,7 @@
 ﻿using System.IO;
-using SpecResults.Model;
+using SpecNuts.Model;
 
-namespace SpecResults
+namespace SpecNuts
 {
 	/// <summary>
 	///     Base class for reporter implementations

@@ -1,7 +1,7 @@
 ﻿using System;
-using SpecResults.ReportingAspect;
+using SpecNuts.ReportingAspect;
 
-namespace SpecResults
+namespace SpecNuts
 {
 	[Reporting]
 	public abstract class ReportingStepDefinitions : ContextBoundObject

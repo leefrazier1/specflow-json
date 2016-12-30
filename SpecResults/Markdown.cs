@@ -1,6 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace SpecResults
+namespace SpecNuts
 {
 	public static class Markdown
 	{

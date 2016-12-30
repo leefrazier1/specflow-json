@@ -1,5 +1,6 @@
 ﻿using System;
-using SpecResults.Json;
+using SpecNuts;
+using SpecNuts.Json;
 using TechTalk.SpecFlow;
 
 namespace SpecResults.ApprovalTestSuite

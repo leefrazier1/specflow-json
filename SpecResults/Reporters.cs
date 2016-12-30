@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Runtime.Remoting.Messaging;
 using System.Text.RegularExpressions;
-using SpecResults.Model;
+using SpecNuts.Model;
 using TechTalk.SpecFlow;
 
-namespace SpecResults
+namespace SpecNuts
 {
 	[Binding]
 	public static partial class Reporters

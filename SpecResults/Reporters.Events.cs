@@ -1,7 +1,7 @@
 ﻿using System;
-using SpecResults.EventArgs;
+using SpecNuts.EventArgs;
 
-namespace SpecResults
+namespace SpecNuts
 {
 	public static partial class Reporters
 	{

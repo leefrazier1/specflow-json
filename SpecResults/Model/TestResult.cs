@@ -1,4 +1,4 @@
-﻿namespace SpecResults.Model
+﻿namespace SpecNuts.Model
 {
     public enum TestResult
     {

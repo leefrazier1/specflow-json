@@ -1,6 +1,6 @@
-﻿using SpecResults.Model;
+﻿using SpecNuts.Model;
 
-namespace SpecResults.EventArgs
+namespace SpecNuts.EventArgs
 {
 	public class ReportEventArgs : System.EventArgs
 	{

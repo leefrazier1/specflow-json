@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using SpecResults.Model;
+using SpecNuts.Model;
 using TechTalk.SpecFlow;
 
-namespace SpecResults
+namespace SpecNuts
 {
 	public static class Extensions
 	{

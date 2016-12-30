@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-using SpecResults.Model;
+using SpecNuts.Model;
 
 namespace SpecResults.UnitTests.Model
 {
