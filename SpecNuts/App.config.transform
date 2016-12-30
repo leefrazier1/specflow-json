@@ -2,7 +2,7 @@
 <configuration>
   <specFlow>
     <stepAssemblies>
-      <stepAssembly assembly="SpecResults" />
+      <stepAssembly assembly="SpecNuts" />
     </stepAssemblies>
   </specFlow>
 </configuration>
