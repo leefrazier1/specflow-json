@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<package>
+	<metadata>
+		<id>$id$</id>
+		<version>$version$</version>
+		<title>$title$</title>
+		<authors>$author$</authors>
+		<owners>$author$</owners>
+    <licenseUrl>https://raw.githubusercontent.com/MagenTys/SpecNuts/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/MagenTys/SpecNuts</projectUrl>
+    <iconUrl>https://avatars3.githubusercontent.com/u/4390751?v=3</iconUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>$description$</description>
+		<releaseNotes>$releaseNotes$</releaseNotes>
+		<copyright>Copyright 2016</copyright>
+		<tags>specflow donut bdd test reporting json</tags>
+		<dependencies>
+			<dependency id="SpecNuts" version="$version$" />
+		</dependencies>
+	</metadata>
+</package>
