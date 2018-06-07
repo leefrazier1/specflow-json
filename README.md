@@ -1,4 +1,4 @@
-# Generating Gherkin JSON from your SpecFlow test suite [![Build status](https://ci.appveyor.com/api/projects/status/yk664hx48ei6l5s2?svg=true)](https://ci.appveyor.com/project/williamsia/specresults) [![NuGet version](https://badge.fury.io/nu/SpecNuts.svg)](https://badge.fury.io/nu/SpecNuts)
+# Generating Gherkin JSON from your SpecFlow test suite [![Build status](https://ci.appveyor.com/api/projects/status/rpklitg605nbty52/branch/master?svg=true)](https://ci.appveyor.com/project/williamsia/specnuts/branch/master) [![NuGet version](https://badge.fury.io/nu/SpecNuts.svg)](https://badge.fury.io/nu/SpecNuts)
 
 
 [SpecNuts](https://www.nuget.org/packages/SpecNuts) was created to get Gherkin JSON from your automated [SpecFlow](http://www.specflow.org/) testsuite. With unit tests most times reporting is only interesting for developers and testers. But when practicing BDD, the output of your automated tests might be valuable for the whole development team, management and perhaps even end-users. You can use tool such as [Donut](https://github.com/MagenTys/donut) to generate a better looking report from your JSON file.
