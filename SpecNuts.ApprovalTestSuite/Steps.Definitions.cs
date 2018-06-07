@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using SpecNuts;
 using SpecNuts.Json;
 using TechTalk.SpecFlow;
@@ -22,7 +23,7 @@ namespace SpecResults.ApprovalTestSuite
 		}
 
 		[When(@"the tests run")]
-		public void WhenTheTestsRun()
+		public async Task WhenTheTestsRun()
 		{
 		}
 
