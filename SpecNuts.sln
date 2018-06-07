@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecNuts", "SpecNuts\SpecNuts.csproj", "{EABA391E-6B65-4E5C-8842-3D71A5F97B4F}"
 EndProject
@@ -28,6 +28,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecNuts.UnitTests", "SpecNuts.UnitTests\SpecNuts.UnitTests.csproj", "{95C18142-2C66-4CA9-8F63-A9B7F65A1820}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecNuts.ApprovalTestSuite", "SpecNuts.ApprovalTestSuite\SpecNuts.ApprovalTestSuite.csproj", "{BBA703FA-94C4-437F-9961-2A321163988A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{934F2AA5-2817-413A-A950-EE8A304AD294}"
+	ProjectSection(SolutionItems) = preProject
+		appveyor.yml = appveyor.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -78,5 +83,8 @@ Global
 		{C830C923-5398-4F28-99C2-1592EE5F4F7B} = {0775EB2A-C4C3-421A-BF01-C4E3C96BD52B}
 		{95C18142-2C66-4CA9-8F63-A9B7F65A1820} = {0A9B592E-B63A-4688-B334-847CABC92E2B}
 		{BBA703FA-94C4-437F-9961-2A321163988A} = {0A9B592E-B63A-4688-B334-847CABC92E2B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0BCD46D1-A548-40D9-ADE5-176891369044}
 	EndGlobalSection
 EndGlobal
